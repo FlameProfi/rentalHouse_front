@@ -77,14 +77,14 @@ const AuthenticationPopUp = ({ popup, setPopup }) => {
               )}
               <p className="text-base mx-auto font-semibold text-[#222222]">
                 {defaultPopup
-                  ? "Log in or sign up"
+                  ? " Войдите или зарегистрируйтесь"
                   : showLoginPopup
-                  ? "Log in"
+                  ? "Войти"
                   : showCreateUserPopup
-                  ? "Finish signing up"
+                  ? "Завершить регистрацию"
                   : profilePopup
-                  ? "Create your profile"
-                  : "Log in or sign up"}
+                  ? "Создать профиль"
+                  : "Войти или зарегистрироваться"}
               </p>
               <div className="w-[14px]"> </div>
             </div>

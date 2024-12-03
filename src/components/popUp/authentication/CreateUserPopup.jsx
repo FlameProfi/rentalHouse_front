@@ -115,14 +115,14 @@ const CreateUserPopup = ({
           <input
             type="text"
             className="w-full border-[1.4px] border-[#dddddd] p-3 rounded-lg"
-            placeholder="First name"
+            placeholder="Имя"
             {...register("firstName", { required: true, maxLength: 40 })}
             aria-invalid={errors.firstName ? "true" : "false"}
           />
           <input
             type="text"
             className="w-full border-[1.4px] border-[#dddddd] p-3 rounded-lg"
-            placeholder="Last name"
+            placeholder="Фамилия"
             {...register("lastName", { required: true, maxLength: 40 })}
             aria-invalid={errors.lastName ? "true" : "false"}
           />
@@ -137,7 +137,7 @@ const CreateUserPopup = ({
                   alt="First name is requires"
                   className="w-5"
                 />
-                <p className="text-xs text-[#c13515]">Name is required</p>
+                <p className="text-xs text-[#c13515]">Имя обязательно</p>
               </div>
             )}
           <p
@@ -145,7 +145,7 @@ const CreateUserPopup = ({
               errors.firstName || errors.lastName ? " hidden" : "block"
             }`}
           >
-            Make sure it matches the name on your government ID.
+            Убедитесь, что оно совпадает с именем, указанным в вашем государственном удостоверении личности.
           </p>
         </div>
         <div>
@@ -153,7 +153,7 @@ const CreateUserPopup = ({
             className="w-full border-[1.4px] border-[#dddddd] p-3 rounded-lg"
             type={`${inputDateFocused ? "date" : "text"}`}
             aria-invalid={errors.birthDate ? "true" : "false"}
-            placeholder="Birthdate"
+            placeholder="Дата рождения"
             onFocus={handleDateFocus}
             onBlur={handleDateBlur}
             {...register("birthDate", {
@@ -171,7 +171,7 @@ const CreateUserPopup = ({
                 alt="Last name is requires"
                 className="w-5"
               />
-              <p className="text-xs text-[#c13515]">Birth date is required</p>
+              <p className="text-xs text-[#c13515]">Дата рождения обязательна</p>
             </div>
           )}
           <p
@@ -179,8 +179,7 @@ const CreateUserPopup = ({
               errors.birthDate ? "hidden" : "block"
             }`}
           >
-            To sign up, you need to be at least 18. Your birthday won’t be
-            shared with other people who use Motel.
+            Чтобы зарегистрироваться, вам должно быть не менее 18 лет.
           </p>
         </div>
         <div>
@@ -188,7 +187,7 @@ const CreateUserPopup = ({
             className="w-full border-[1.4px] border-[#dddddd] p-3 rounded-lg"
             type="email"
             defaultValue={loginEmail}
-            placeholder="Email"
+            placeholder="Электронная почта"
             {...register("email", { required: true })}
             aria-invalid={errors.email ? "true" : "false"}
           />
@@ -202,7 +201,7 @@ const CreateUserPopup = ({
                 alt="Last name is requires"
                 className="w-5"
               />
-              <p className="text-xs text-[#c13515]">Email is required</p>
+              <p className="text-xs text-[#c13515]">Электронная почта обязательна</p>
             </div>
           )}
           <p
@@ -210,13 +209,13 @@ const CreateUserPopup = ({
               errors.email ? "hidden" : "block"
             }`}
           >
-            We&apos;ll email you trip confirmations and receipts.
+            Мы отправим подтверждение по электронной почте.
           </p>
         </div>
         <div className="relative">
           <input
             type={passwordVisible ? "text" : "password"}
-            placeholder="Password"
+            placeholder="Пароль"
             className="w-full border-[1.5px] border-[#dddddd] p-3 rounded-lg transition-all duration-300"
             {...register("password", {
               required: true,
@@ -240,7 +239,7 @@ const CreateUserPopup = ({
                 className="w-5"
               />
               <p className="text-xs text-[#c13515]">
-                At least 8 characters & Contains a number or symbol
+              Не менее 8 символов & Содержит число или символ
               </p>
             </div>
           )}
@@ -249,28 +248,29 @@ const CreateUserPopup = ({
               errors.password ? "hidden" : "block opacity-60"
             }`}
           >
-            At least 8 characters & Contains a number or symbol
+            Не менее 8 символов & Содержит число или символ
           </p>
         </div>
         <div>
           <span className=" text-[#717171] text-xs font-medium">
-            By selecting{" "}
+          Выбирая{" "}
             <span className="font-semibold text-[#222222]">
               {" "}
-              Agree and continue
+              Согласие и продолжение
             </span>
-            , I agree to
+            , я соглашаюсь с
             <Link className=" text-blue-600 underline font-medium">
               {" "}
-              Motel Terms of Service, Payments Terms of Service,
+              Условиями службы поддержки, условиями платежей, и
             </Link>{" "}
-            and Nondiscrimination Policy and acknowledge the Privacy Policy.
+            политикой отказа от рекламы и подтверждаю, что подтвердил
+            политику конфиденциальности.
           </span>
         </div>
         <div className=" flex flex-row items-center gap-5">
           <input type="checkbox" className="h-5 w-5" />
           <p className=" text-xs">
-            I don’t want to receive marketing messages from Motel.
+            Я не хочу получать рекламу.
           </p>
         </div>
         <div>
@@ -289,7 +289,7 @@ const CreateUserPopup = ({
                 speedMultiplier={0.6}
               />
             ) : (
-              "Agree and continue"
+              "Согласие и продолжение"
             )}
           </button>
         </div>

@@ -98,10 +98,10 @@ const LogInPopup = ({
             <div className=" flex flex-col gap-[2px]">
               <h6 className=" text-sm text-[#222222] font-semibold">
                 {/* // &apos; is basically this sign ' */}
-                Let&apos;s try that again
+                Попробуйте еще раз
               </h6>
               <p className=" text-sm text-[#717171] opacity-80">
-                Invalid login credentials. Please try again.
+              Неверные данные для входа в систему. Пожалуйста, попробуйте еще раз.
               </p>
             </div>
           </div>
@@ -110,7 +110,7 @@ const LogInPopup = ({
           <div className="relative my-4">
             <input
               type={passwordVisible ? "text" : "password"}
-              placeholder="Password"
+              placeholder="Пароль"
               className="w-full border-[1.5px] border-[#dddddd] p-3 rounded-lg transition-all duration-300"
               {...register("password", {
                 required: true,
@@ -124,7 +124,7 @@ const LogInPopup = ({
               }  right-3 transform -translate-y-1/2 text-[#222222] text-xs font-semibold underline cursor-pointer`}
               onClick={togglePasswordVisibility}
             >
-              {passwordVisible ? "Hide" : "Show"}
+              {passwordVisible ? "Спрятать" : "Показать"}
             </span>
             {errors.password && (
               <div
@@ -133,11 +133,11 @@ const LogInPopup = ({
               >
                 <img
                   src={errorIcon}
-                  alt="Last name is requires"
+                  alt="Фамилия требует"
                   className="w-5"
                 />
                 <p className="text-xs text-[#c13515]">
-                  At least 8 characters long
+                Длина не менее 8 символов
                 </p>
               </div>
             )}
@@ -157,21 +157,14 @@ const LogInPopup = ({
                 speedMultiplier={0.6}
               />
             ) : (
-              "Log in"
+              "Войти"
             )}
           </button>
         </form>
       </div>
       <Link className=" text-[#222222] text-sm font-medium underline pt-3 px-8">
-        Forgot Password?
+        Забыли пароль?
       </Link>
-
-      <div className=" pt-4 px-8 italic pb-7">
-        <ul className=" list-disc text-xs text-[#222222] opacity-80">
-          <p>You can use below test credentials to login!</p>
-          <li>Password: guest1234</li>
-        </ul>
-      </div>
     </div>
   );
 };

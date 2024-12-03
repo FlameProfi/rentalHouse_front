@@ -49,7 +49,7 @@ const Navbar = () => {
 
   const isUserExist = () => {
     if (!user) {
-      toast.error("You need to log in first!");
+      toast.error("Для продолжение необходимо войти в аккаунт!");
 
       setTimeout(() => {
         navigate("/");
@@ -176,7 +176,7 @@ const Navbar = () => {
                               setPopup(true);
                             }}
                           >
-                            Sign up
+                            Зарегистрироваться
                           </Link>
                           <Link
                             onClick={() => {
@@ -184,11 +184,8 @@ const Navbar = () => {
                               setPopup(true);
                             }}
                           >
-                            Login
+                            Вход в систему
                           </Link>
-                          <hr className="h-[1.5px] bg-[#dddddd] my-1" />
-                          {/* <Link to={"/host/homes"}>Motel your home</Link> */}
-                          <Link>Help</Link>
                         </div>
                       ) : (
                         // logged in user menu
@@ -222,7 +219,7 @@ const Navbar = () => {
                           ) : (
                             <Link className="font-medium">Уведомления</Link>
                           )}
-                          <Link className="font-medium">Дома</Link>
+                          <Link className="font-medium" to={"/home"}>Дома</Link>
                           <hr className="h-[1.5px] bg-[#dddddd] my-1" />
                           {/* <Link to={"/host/homes"}>Motel your home</Link> */}
                           <Link to={`/users/show/${user._id}`}>Аккаунт</Link>

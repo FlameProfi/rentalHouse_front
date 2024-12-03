@@ -51,7 +51,7 @@ const Payment = ({ searchParamsObj }) => {
     e.preventDefault();
 
     if (!user) {
-      toast.error("You need to log in first!");
+      toast.error("Для продолжение необходимо войти в аккаунт");
 
       setTimeout(() => {
         navigate("/");
