@@ -1,16 +1,16 @@
-import './assets/css/normalize.css'
-import './assets/css/firsovhouse.webflow.css'
-import './assets/css/webflow.css'
 import { useNavigate } from "react-router-dom"
+import './assets/css/firsovhouse.webflow.css'
+import './assets/css/normalize.css'
+import './assets/css/webflow.css'
+import arrowLeft from './assets/images/arrowLeft.svg'
+import arrowRight from './assets/images/arrowRight.svg'
 import image1 from './assets/images/image-1.svg'
 import image2 from './assets/images/image-2.svg'
 import image3 from './assets/images/image-3.svg'
-import image4 from './assets/images/image-4.svg'    
-import image5 from './assets/images/image-5.svg'    
+import image4 from './assets/images/image-4.svg'
+import image5 from './assets/images/image-5.svg'
 import image6 from './assets/images/image-6-png.png'
 import image7 from './assets/images/img-7-jpg.jpg'
-import arrowLeft from './assets/images/arrowLeft.svg'
-import arrowRight from './assets/images/arrowRight.svg'
 /* eslint-disable react/prop-types */
 const NewHomePage = () => {
     const navigate = useNavigate();
@@ -90,22 +90,42 @@ const NewHomePage = () => {
   </div>
   <div className="fourthblock">
     <div className="z">
-      <div className="txconditions">Условия сдачи</div>
+      <div className="txconditions">Условия бронирования</div>
       <div className="gridconditions">
         <div id="w-node-ea3925af-00ea-c316-1a0a-11b7e5c578e5-023c74d6" className="undeconditions">
-          <div className="txmid">Посуточно</div>
-          <div className="txunder">Невольно от настоящего я перешёл к 1825 году… Но и в 1825 году герой мой был уже возмужалым, семейным человеком. Чтобы понять его, мне нужно было перенестись к его молод</div>
-          <div className="txnm">1.000₽</div>
+          <div className="txmid">Условия бронирования</div>
+          <div className="txunder">Сезон:  с 10 января 2024 по 1  мая 2025
+            Срок: от 2-х ночей. 
+            Время: заезд в 15.00, выезд в 12.00 или по согласованию
+            Расчёты: предоплата «сбербанк он-лайн».
+            Стоимость:
+            птн., сб., вскр. – 10,5 тыс. руб./сутки
+            7 дней – 45,0 тыс. руб./неделя
+            30 дней – 125,0  тыс. руб./месяц
+            Другие сроки бронирования по дополнительному  согласованию.
+            Возвратный депозит (возможная порча имущества) – 5,0 тыс. руб.</div>
+          {/* <div className="txnm">1.000₽</div> */}
         </div>
         <div id="w-node-becbf088-814d-11de-d95c-4929f80e2dbc-023c74d6" className="undeconditions">
-          <div className="txmid">Посуточно</div>
-          <div className="txunder">Невольно от настоящего я перешёл к 1825 году… Но и в 1825 году герой мой был уже возмужалым, семейным человеком. Чтобы понять его, мне нужно было перенестись к его молод</div>
-          <div className="txnm">1.000₽</div>
+          <div className="txmid">Условия проживания </div>
+          <div className="txunder">Одноэтажный 3-х комнатный дом с «зелёной крышей, 46 кв. м. с панорамным окном, позволяющим наблюдать за меняющимся пейзажем и, особенной красоты, закатами.
+Отопление: Дровяная печка. Конвекторы.
+Комфортно для пребывания 4-5 персон.
+Пребывание с детьми – да;
+Пребывание с животными – по предварительному согласованию;
+</div>
+          {/* <div className="txnm">1.000₽</div> */}
         </div>
         <div id="w-node-dbf74d80-12dd-ce91-7102-2bec1addc5cd-023c74d6" className="undeconditions">
-          <div className="txmid">Посуточно</div>
-          <div className="txunder">Невольно от настоящего я перешёл к 1825 году… Но и в 1825 году герой мой был уже возмужалым, семейным человеком. Чтобы понять его, мне нужно было перенестись к его молод</div>
-          <div className="txnm">1.000₽</div>
+          <div className="txmid">Условия проживания </div>
+          <div className="txunder">•	2 Спальни.  (2-х местная кровать 160 см, комод, 2-х ярусная кровать. Верх 90*160 раскладывающимся внизу диваном шириной 160 см, комод, шкаф)
+•	Кухня-гостиная (2-х местный диван; телевизор WI-FI. SberBoх; стол, стулья, кухонный гарнитур: электро-плита – 2 конфорки, духовка; холодильник; посудомойка; микроволновка; посуда, приборы. WI-FI. SberBoх
+•	Прихожая (шкаф для верхней одежды)
+•	Душевая – уборная (бойлер, фен, полотенца)
+•	Уличная терраса с 2 - мя стульями и столиком
+•	Уличный мангал для приготовления пищи (решётки, шампуры – в наличии)  
+</div>
+          {/* <div className="txnm">1.000₽</div> */}
         </div>
       </div>
     </div>
@@ -185,12 +205,11 @@ const NewHomePage = () => {
       </div>
     </div>
   </div>
-  <div className="footer">
-    <div className="z">
-      <div>
-        <h1>тут что то будет</h1>
-      </div>
-    </div>
+  <div className="footer_custom">
+        <div className='space_beetwen'>
+          <h1>Firsovhouse</h1>
+          <div className='icons'></div>
+        </div>
   </div>
       </>
     );

@@ -594,8 +594,32 @@
   height: auto;
 }
 
-.footer {
+.footer_custom {
+  padding: 20px;
   height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  .space_beetwen{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    h1{
+      font-family: 'Unbounded';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 40px;
+      /* identical to box height */
+      text-align: center;
+      text-transform: uppercase;
+
+      color: #202020;
+    }
+  }
+
 }
 
 
